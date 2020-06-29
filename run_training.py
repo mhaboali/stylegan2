@@ -4,6 +4,8 @@
 # To view a copy of this license, visit
 # https://nvlabs.github.io/stylegan2/license.html
 
+# mogrify -gravity Center -extent "512x512" -background white *.jpg
+
 import argparse
 import copy
 import os
@@ -177,7 +179,7 @@ def main():
     parser.add_argument('--metrics', help='Comma-separated list of metrics or "none" (default: %(default)s)', default='fid50k', type=_parse_comma_sep)
     parser.add_argument('--image_snapshot_ticks', help='How often to save an image snapshot.', default=1, type=int, metavar='N')
     parser.add_argument('--network_snapshot_ticks', help='How often to save a network snapshot.', default=4, type=int, metavar='N')
-    parser.add_argument('--resume_pkl', help='Set the path to the desired pkl to resume training from, or find the latest pkl.', default='latest')
+    parser.add_argument('--resume_pkl', help='Set the path to the desired pkl to resume training from, or find the latest pkl.', default='None')
     args = parser.parse_args()
 
     if not os.path.exists(args.data_dir):

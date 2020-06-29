@@ -1,0 +1,11 @@
+.stylegan2-cache
+.vscode
+dogs_res
+ex1-res
+ex2-res
+ex3-res
+ex4-res
+metrics
+results
+*.pyc
+dnnlib/tflib/_cudacache/*
