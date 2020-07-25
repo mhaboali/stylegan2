@@ -1,0 +1,5 @@
+networks
+results
+test_nvcc
+*.pyc
+*.so
